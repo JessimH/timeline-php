@@ -80,7 +80,7 @@ class DashboardController extends Controller
             $user->save();
             return redirect(route('dashboard'))->with('success','Votre compte a bien été modifié!');
         } else {
-            return redirect()->back();
+            return redirect()->back()->with('error','Il y a eu une erreur');
         }
     }
 
