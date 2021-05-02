@@ -89,11 +89,10 @@ class DashboardController extends Controller
         $userToDelete = User::where('id', $id)->get();
 
         if(count($userToDelete)>0){
-            User::where('id', $id )->delete();
-
             $userId = Auth::user()->id;
 
             if($userId === $id){
+                User::where('id', $id )->delete();
                 return redirect('/')->with('success','Votre compte a bien été suprimé!');
             }
             else{
@@ -103,5 +102,27 @@ class DashboardController extends Controller
         else{
             return redirect('/dashboard')->with('error','Le compte est introuvable, contactez votre administrateur de base de données.');
         } 
+    }
+
+    public function destroyPic($id)
+    {
+        $user = User::find(Auth::user()->id);
+
+        if($user){
+            $userId = Auth::user()->id;
+
+            if($userId == $id){
+                $user->fileName = "";
+                $user->save();
+                return redirect('/dashboard')->with('success','Votre photo de profil a bien été suprimé!');
+            }
+            else{
+                return redirect('/dashboard')->with('error','Vous ne pouvez pas supprimer la photo n\'importe qui !');
+            }
+        }
+        else{
+            return redirect('/dashboard')->with('error','Le compte est introuvable, contactez votre administrateur de base de données.');
+        } 
+
     }
 }

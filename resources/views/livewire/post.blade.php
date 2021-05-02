@@ -1,7 +1,19 @@
 <div class="flex items-center my-5 px-4 bg-white">
     <div class="max-w-lg w-full rounded-lg shadow-lg p-4">
-        <div class="inline-block rounded-full bg-green-300 text-white pr-5 h-11 line-height-username1 hover:bg-pink-400 cursor-pointer">
-            <img class="rounded-full float-left h-full" src="{{url('/images/'.$post->user->fileName)}}"> <span class="ml-3">{{ $post->user->name }}</span>
+        <div class="inline-block rounded-full bg-green-300 text-white pr-5 h-11 line-height-username1 hover:bg-pink-400 cursor-pointer"> 
+            @if(Auth::user()->fileName)
+                <img
+                    class="rounded-full float-left h-full"
+                    alt="User avatar"
+                    src="{{url('/images/'.Auth::user()->fileName)}}"
+                />
+            @else
+                <img 
+                    class="rounded-full float-left h-full"
+                    alt="User avatar"
+                    src="http://fanfare-makabes.fr/wp-content/uploads/2015/09/user-image.jpg" alt="">
+            @endif
+            <span class="ml-3">{{ $post->user->name }}</span>
         </div>
         <p class="text-gray-500 my-1">
              {{\Carbon\Carbon::parse($post->created_at)->diffForHumans(null, true).' ago'}}

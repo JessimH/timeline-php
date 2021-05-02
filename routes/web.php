@@ -36,4 +36,7 @@ Route::get('/dashboard/user/{user}', '\App\Http\Controllers\DashboardController@
 
 Route::post('/dashboard/user/update/{id}','\App\Http\Controllers\DashboardController@update')->middleware(['auth']);
 
+
+Route::get('/dashboard/user/delete-profilePic/{id}', '\App\Http\Controllers\DashboardController@destroyPic')->middleware(['auth']);
+
 require __DIR__.'/auth.php';
