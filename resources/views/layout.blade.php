@@ -27,7 +27,7 @@
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
             <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-                <img src="/images/logo-entier.png" class="object-scale-down h-10" alt="">
+                <img src="https://i.ibb.co/8dBD163/Logo-entier.png" class="object-scale-down h-10" alt="">
             </a>
         </div>
         <div class="block lg:hidden pr-4">
@@ -66,7 +66,7 @@
         <div class="w-full flex flex-col md:flex-row py-6">
             <div class="flex-1 mb-6 text-black">
                 <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-                    <img src="/images/logo-entier.png" class="object-scale-down h-10" alt="">
+                    <img src="https://i.ibb.co/8dBD163/Logo-entier.png" class="object-scale-down h-10" alt="">
                 </a>
             </div>
             <div class="flex-1">

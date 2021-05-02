@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="/">
-                        <img src="/images/logo.png" class="object-scale-down h-10" alt="">
+                        <img src="https://i.ibb.co/tXky4LZ/logo.png" class="object-scale-down h-10" alt="">
                     </a>
                 </div>
 
