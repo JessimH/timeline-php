@@ -21,6 +21,7 @@
     </style>
 </head>
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+@include('flash-message')
 <!--Nav-->
 <nav id="header" class="fixed w-full z-30 top-0 text-white">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -57,7 +58,6 @@
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
 </nav>
-@include('flash-message')
 <!--Hero-->
 @yield('content')
 <!--Footer-->
