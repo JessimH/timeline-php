@@ -17,12 +17,19 @@
                             <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-indigo-400 rounded-t">
                             <div class="max-w-sm mx-auto md:w-full md:mx-0">
                                 <div class="inline-flex items-center space-x-4">
-                                <img
-                                    class="w-10 h-10 object-cover rounded-full"
-                                    alt="User avatar"
-                                    src="{{url('/images/'.Auth::user()->fileName)}}"
-                                />
-
+                                @if(Auth::user()->fileName)
+                                    <img
+                                        class="w-10 h-10 object-cover rounded-full"
+                                        alt="User avatar"
+                                        src="{{url('/images/'.Auth::user()->fileName)}}"
+                                    />
+                                @else
+                                    <img 
+                                        class="w-10 h-10 object-cover rounded-full"
+                                        alt="User avatar"
+                                        src="http://fanfare-makabes.fr/wp-content/uploads/2015/09/user-image.jpg" alt="">
+                                @endif
+                                
                                 <h1 class="text-gray-600">{{ Auth::user()->name }}</h1>
                                 </div>
                             </div>

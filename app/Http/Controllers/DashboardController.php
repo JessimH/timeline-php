@@ -54,11 +54,19 @@ class DashboardController extends Controller
     { 
         $user = User::find(Auth::user()->id);
 
+        $request->validate([
+            'email' => 'required|email|max:255|unique:users,email,'.Auth::user()->id.',id',
+        ]);
+
         if($user) {
-            $user->name = $request['name'];
-            $user->email = $request['email'];
+            if($request['name']){
+                $user->name = $request['name'];
+            }
+            if($request['email']){
+                $user->email = $request['email'];
+            }
             $user->password = bcrypt($request['password']);
-            if ($request->hasFile('fileName')) {
+            if ($request['fileName']) {
 
                 $request->validate([
                     'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
@@ -70,7 +78,7 @@ class DashboardController extends Controller
                 $user->fileName = $namePic;
             }
             $user->save();
-            return redirect(route('dashboard'))->with('success','Votre compte a bien été modifié!');;
+            return redirect(route('dashboard'))->with('success','Votre compte a bien été modifié!');
         } else {
             return redirect()->back();
         }

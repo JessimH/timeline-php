@@ -7,7 +7,10 @@
                     <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
                     <span class="hidden group-hover:table-cell text-white font-bold align-middle">KR</span>
                     @if(Auth::user()->fileName)
-                    <img src="{{url('/images/'.Auth::user()->fileName)}}" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+                        <img src="{{url('/images/'.Auth::user()->fileName)}}" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+                    @else
+                        <img src="http://fanfare-makabes.fr/wp-content/uploads/2015/09/user-image.jpg" alt="">
+                    @endif
                     </div>
                 </div>
                 <p class="text-xl font-semibold my-2">{{ Auth::user()->name }}</p>
