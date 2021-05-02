@@ -86,13 +86,14 @@ class DashboardController extends Controller
 
     public function destroy($id)
     {
-        $userToDelete = User::where('id', $id)->get();
+        $user = User::find(Auth::user()->id);
 
-        if(count($userToDelete)>0){
+        if($user){
             $userId = Auth::user()->id;
 
-            if($userId === $id){
+            if($userId == $id){
                 User::where('id', $id )->delete();
+
                 return redirect('/')->with('success','Votre compte a bien été suprimé!');
             }
             else{
