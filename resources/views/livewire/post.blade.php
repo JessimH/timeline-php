@@ -1,11 +1,11 @@
 <div class="flex items-center my-5 px-4 bg-white">
     <div class="max-w-lg w-full rounded-lg shadow-lg p-4">
         <div class="inline-block rounded-full bg-green-300 text-white pr-5 h-11 line-height-username1 hover:bg-pink-400 cursor-pointer"> 
-            @if(Auth::user()->fileName)
+            @if($post->user->fileName )
                 <img
                     class="rounded-full float-left h-full"
                     alt="User avatar"
-                    src="{{url('/images/'.Auth::user()->fileName)}}"
+                    src="{{url('/images/'.$post->user->fileName)}}"
                 />
             @else
                 <img 
