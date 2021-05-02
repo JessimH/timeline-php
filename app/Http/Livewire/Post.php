@@ -8,8 +8,6 @@ class Post extends Component
 {
     public $post;
 
-    public $name = "Clem";
-
     public function mount($post)
     {
         $this->post = $post;

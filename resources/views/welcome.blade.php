@@ -64,7 +64,7 @@
 <section class="bg-gray-100 py-8">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Le même prix pour chaque coach !
+            Le même prix pour chaques coach !
         </h1>
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -72,13 +72,12 @@
         <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
             <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
                 <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
+                    <div class="w-full p-8 text-3xl font-bold text-center">Tarif</div>
                     <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
                     <ul class="w-full text-center text-base font-bold">
                         <li class="border-b py-4">Accédez aux feeds privés de vos proffessionnel favoris</li>
                         <li class="border-b py-4">Accès illimité aux photos, videos, storys et lives du coach !</li>
                         <li class="border-b py-4">Programmez des coaching en lives ou physique!</li>
-                        <li class="border-b py-4">Un coaching 24/7 </li>
                     </ul>
                 </div>
                 <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">

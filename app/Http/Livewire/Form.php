@@ -11,7 +11,7 @@ class Form extends Component
 
     public function createPost()
     {
-        $this->validate(['body' => 'required|min:15']);
+        $this->validate(['body' => 'required|min:6']);
 
         $post = auth()->user()->posts()->create(['body' => $this->body]);
 

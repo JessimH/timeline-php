@@ -5,8 +5,8 @@
         </div>
     @endif
     <div>
-         @foreach ($posts as $post)
-        <livewire:post :post="$post" :key="$post->id" />
+        @foreach ($posts as $post)
+            <livewire:post :post="$post" :key="$post->id" />
         @endforeach
     </div>
 </div>

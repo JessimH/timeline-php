@@ -17,10 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/user', function () {
+    return view('welcome');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
 Route::post('/dashboard', '\App\Http\Controllers\DashboardController@createPost');
+
+Route::get('/dashboard/user', '\App\Http\Controllers\DashboardController@showForm')->middleware(['auth']);
+
+Route::get('/dashboard/user/destroy/{id}', '\App\Http\Controllers\DashboardController@destroy')->middleware(['auth']);
+
+Route::get('/dashboard/user/{user}', '\App\Http\Controllers\DashboardController@showForm')->middleware(['auth']);
+
+Route::post('/dashboard/user/update/{id}','\App\Http\Controllers\DashboardController@update')->middleware(['auth']);
 
 require __DIR__.'/auth.php';
